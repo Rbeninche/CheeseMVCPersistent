@@ -26,7 +26,7 @@ namespace CheeseMVC.ViewModels
             CheeseTypes = new List<SelectListItem>();
 
             // <option value="0">Hard</option>
-            CheeseTypes.Add(new SelectListItem {
+           /* CheeseTypes.Add(new SelectListItem {
                 Value = ((int) CheeseType.Hard).ToString(),
                 Text = CheeseType.Hard.ToString()
             });
@@ -41,7 +41,16 @@ namespace CheeseMVC.ViewModels
             {
                 Value = ((int)CheeseType.Fake).ToString(),
                 Text = CheeseType.Fake.ToString()
-            });
+            });*/
+
+            foreach (var value in Enum.GetValues(typeof(CheeseType)))
+            {
+                CheeseTypes.Add(new SelectListItem
+                {
+                    Value = ((int)value).ToString(),
+                    Text = value.ToString()
+                });
+            }
 
         }
     }
