@@ -32,24 +32,6 @@ namespace CheeseMVC.ViewModels
 
             Categories = new List<SelectListItem>();
 
-            // <option value="0">Hard</option>
-           /* CheeseTypes.Add(new SelectListItem {
-                Value = ((int) CheeseType.Hard).ToString(),
-                Text = CheeseType.Hard.ToString()
-            });
-
-            CheeseTypes.Add(new SelectListItem
-            {
-                Value = ((int)CheeseType.Soft).ToString(),
-                Text = CheeseType.Soft.ToString()
-            });
-
-            CheeseTypes.Add(new SelectListItem
-            {
-                Value = ((int)CheeseType.Fake).ToString(),
-                Text = CheeseType.Fake.ToString()
-            });*/
-
             foreach (var value in categories)
             {
                 Categories.Add(new SelectListItem
